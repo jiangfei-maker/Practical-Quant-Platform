@@ -52,7 +52,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/jiangfei-maker/-.git Practical-Quant-Platform
+git clone https://github.com/jiangfei-maker/Practical-Quant-Platform.git
 cd Practical-Quant-Platform
 
 # 创建虚拟环境

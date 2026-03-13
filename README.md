@@ -6,21 +6,29 @@
 ![Polars](https://img.shields.io/badge/Polars-CD793D?style=for-the-badge&logo=polars&logoColor=white)
 ![AI Powered](https://img.shields.io/badge/AI-LLM%20Agent-00A67E?style=for-the-badge)
 
-专为 **一人公司 (One-Person Company)** 打造的高性能、AI 驱动的全栈量化交易平台。本项目整合了 **Polars** (极速计算)、**DuckDB** (高效存储) 与 **LLM** (AI 投研)，构建了一套从数据采集、因子挖掘、回测验证到实盘交易的完整闭环系统。
+> **🚀 专为一人公司 (One-Person Company) 打造的高性能、AI 驱动的全栈量化交易平台。**
+
+![Dashboard](实战量化交易平台/docs/img/dashboard.png)
+
+本项目整合了 **Polars** (极速计算)、**DuckDB** (高效存储) 与 **LLM** (AI 投研)，构建了一套从数据采集、因子挖掘、回测验证到实盘交易的完整闭环系统。
 
 ## 🌟 核心亮点
 
-### 1. 高性能数据引擎
+### 1. 📈 全市场实时行情与分析
+![Market Analysis](实战量化交易平台/docs/img/market_analysis.png)
 - **DuckDB + Parquet**: 采用列式存储，支持亿级行情的秒级查询。
 - **Polars**: 替代 Pandas 进行因子计算，速度提升 10-100 倍。
 - **全市场覆盖**: 支持 A 股、港股、美股、期货等实时与历史数据 (基于 AkShare)。
 
-### 2. AI 智能投研 (AI Research Agent)
+### 2. 🧠 AI 智能投研 (AI Research Agent)
+![AI Research](实战量化交易平台/docs/img/ai_research.png)
+
 - **LLM 驱动**: 集成 ZhipuAI (GLM-4) 等大模型，支持自然语言交互。
 - **RAG 架构**: 结合本地金融数据库与网络搜索 (DuckDuckGo)，提供有理有据的研报生成。
 - **智能工具链**: AI 可自主调用 SQL 查询、新闻搜索、财报分析等工具回答复杂问题。
 
-### 3. 全功能量化闭环
+### 3. ⚖️ 全功能量化闭环
+
 - **实时行情**: 毫秒级快照监控，支持自定义自选股池。
 - **财务分析**: 深度集成杜邦分析、财务风险预警模型。
 - **策略回测**: 内置高性能回测引擎，支持向量化回测与事件驱动回测。

@@ -1,0 +1,161 @@
+/* Cyberpunk / Sci-Fi Theme for Streamlit */
+
+/* 1. 全局字体与背景 */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@400;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'JetBrains Mono', 'Segoe UI', monospace;
+    color: #e0e0e0; /* 默认亮灰色字体，防止黑色背景下不可见 */
+}
+
+/* 主应用背景 */
+.stApp {
+    background-color: #0e1117;
+    background-image: radial-gradient(circle at 50% 50%, #161b22 0%, #0e1117 100%);
+}
+
+/* 2. 侧边栏 (Glassmorphism) */
+[data-testid="stSidebar"] {
+    background-color: rgba(22, 27, 34, 0.8);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(0, 243, 255, 0.1);
+}
+
+/* 侧边栏标题 */
+[data-testid="stSidebar"] h1, [data-testid="stSidebar"] h2, [data-testid="stSidebar"] h3 {
+    color: #00f3ff;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 5px rgba(0, 243, 255, 0.5);
+}
+
+/* 3. 标题与发光特效 */
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+h1 {
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+    border-bottom: 2px solid #00f3ff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+h2 {
+    border-left: 4px solid #bc13fe;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+/* 4. 关键指标 (Metrics) */
+[data-testid="stMetricValue"] {
+    font-family: 'Orbitron', sans-serif;
+    color: #00f3ff !important;
+    text-shadow: 0 0 5px rgba(0, 243, 255, 0.5);
+}
+
+[data-testid="stMetricDelta"] svg {
+    filter: drop-shadow(0 0 2px currentColor);
+}
+
+/* 5. 卡片与容器 (Containers) */
+/* 给 expander 增加边框和背景 */
+.streamlit-expanderHeader {
+    background-color: #1c2128;
+    border: 1px solid #30363d;
+    color: #e0e0e0;
+}
+
+[data-testid="stExpander"] {
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* 6. 表格 (DataFrame) */
+[data-testid="stDataFrame"] {
+    border: 1px solid #30363d;
+}
+
+/* 修复表格文字颜色 */
+[data-testid="stDataFrame"] th {
+    background-color: #161b22 !important;
+    color: #00f3ff !important;
+}
+
+[data-testid="stDataFrame"] td {
+    color: #e0e0e0 !important;
+    background-color: #0e1117 !important;
+}
+
+/* 7. 输入框 (Inputs) */
+/* 修复输入框背景和文字，防止看不清 */
+input, textarea, select {
+    background-color: #0d1117 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #30363d !important;
+}
+
+/* Streamlit 特有输入框覆盖 */
+.stTextInput input, .stNumberInput input, .stDateInput input, .stSelectbox div[data-baseweb="select"] {
+    background-color: #0d1117;
+    color: #e0e0e0;
+    border-color: #30363d;
+}
+
+/* 8. 按钮 (Buttons) */
+/* Primary Button */
+.stButton button[kind="primary"] {
+    background: linear-gradient(45deg, #00f3ff, #00a8ff);
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.stButton button[kind="primary"]:hover {
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.6);
+    transform: scale(1.02);
+}
+
+/* Secondary Button */
+.stButton button[kind="secondary"] {
+    background-color: transparent;
+    border: 1px solid #00f3ff;
+    color: #00f3ff;
+}
+
+/* 9. 选项卡 (Tabs) */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 10px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    height: 50px;
+    white-space: pre-wrap;
+    background-color: #161b22;
+    border-radius: 4px 4px 0 0;
+    color: #8b949e;
+    border: 1px solid transparent;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #0e1117;
+    color: #bc13fe;
+    border-top: 2px solid #bc13fe;
+    border-left: 1px solid #30363d;
+    border-right: 1px solid #30363d;
+}
+
+/* 10. 修复 div 黑色不可见问题 (通用覆盖) */
+div {
+    color: inherit; /* 继承父元素颜色，通常是 #e0e0e0 */
+}
+
+/* Plotly 图表背景透明 */
+.js-plotly-plot .plotly .main-svg {
+    background: transparent !important;
+}

@@ -1,0 +1,97 @@
+/* Cyberpunk / Sci-Fi Theme for Streamlit */
+
+/* Global Background */
+.stApp {
+    background-color: #0e1117;
+    color: #e0e0e0;
+    font-family: 'Courier New', Courier, monospace; /* Terminal vibe */
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #161b22;
+    border-right: 1px solid #30363d;
+}
+
+/* Sidebar Content Visibility Fix */
+[data-testid="stSidebar"] * {
+    color: #e0e0e0;
+}
+
+[data-testid="stSidebarNavLink"] span {
+    color: #e0e0e0 !important;
+}
+
+[data-testid="stSidebarNavLink"][aria-current="page"] span {
+    color: #00f3ff !important;
+    font-weight: bold;
+}
+
+[data-testid="stSidebar"] hr {
+    border-color: #30363d;
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: #00f3ff !important; /* Cyber Blue */
+    text-shadow: 0 0 5px #00f3ff;
+}
+
+/* Metrics */
+[data-testid="stMetricValue"] {
+    color: #0aff0a !important; /* Matrix Green */
+    text-shadow: 0 0 5px #0aff0a;
+}
+
+/* Buttons */
+.stButton button {
+    background-color: #1f2937;
+    color: #00f3ff;
+    border: 1px solid #00f3ff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #00f3ff;
+    transition: all 0.3s ease;
+}
+
+.stButton button:hover {
+    background-color: #00f3ff;
+    color: #000;
+    box-shadow: 0 0 15px #00f3ff;
+}
+
+/* Dataframes */
+[data-testid="stDataFrame"] {
+    border: 1px solid #30363d;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 10px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: #161b22;
+    border-radius: 5px;
+    color: #8b949e;
+    border: 1px solid #30363d;
+}
+
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background-color: #1f2937;
+    color: #00f3ff;
+    border-color: #00f3ff;
+    box-shadow: 0 0 5px #00f3ff;
+}
+
+/* Inputs */
+.stTextInput input, .stNumberInput input, .stSelectbox div[data-baseweb="select"] {
+    background-color: #0d1117;
+    color: #e0e0e0;
+    border: 1px solid #30363d;
+}
+
+.stTextInput input:focus, .stNumberInput input:focus {
+    border-color: #bc13fe; /* Neon Purple */
+    box-shadow: 0 0 5px #bc13fe;
+}

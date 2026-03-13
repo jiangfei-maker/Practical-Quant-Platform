@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+*.env
+
+# IDE
+.vscode/
+.idea/
+
+# Data & Databases
+*.duckdb
+*.duckdb.wal
+*.db
+*.parquet
+data/
+market_data.duckdb
+
+# Logs
+logs/
+*.log
+system.log
+
+# Streamlit
+.streamlit/secrets.toml
+
+# System
+.DS_Store
+Thumbs.db

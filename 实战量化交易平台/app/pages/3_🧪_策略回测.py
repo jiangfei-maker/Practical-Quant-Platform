@@ -156,9 +156,6 @@ with col_b2:
                         z=pivot_table.values,
                         x=pivot_table.columns,
                         y=pivot_table.index,
-                        colorscale='RdBu', # Red for loss, Blue for gain? Or RdGn (Red-Green)? 
-                        # RdBu: Red is low (loss), Blue is high (gain). In China, Red is Gain.
-                        # Custom colorscale: Green (Loss) -> White -> Red (Gain)
                         colorscale=[[0, 'green'], [0.5, 'white'], [1, 'red']],
                         zmid=0,
                         texttemplate="%{z:.1f}%",

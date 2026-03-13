@@ -1,4 +1,4 @@
-from langchain.tools import Tool
+from langchain_core.tools import Tool
 from langchain_community.utilities import DuckDuckGoSearchAPIWrapper
 from core.data.db_manager import db_manager
 from loguru import logger
